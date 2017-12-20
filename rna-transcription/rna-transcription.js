@@ -8,17 +8,14 @@ const dnaToRnaTranscription = {
 };
 
 DnaTranscriber.prototype.toRna = function (dnaStrand) {
-	
-	return dnaStrand.split('').map(
-		dna => {
-			if(dnaToRnaTranscription[dna]){
-				return dnaToRnaTranscription[dna];
-			} else {
-				throw new Error("Invalid input");
-			}
-		}
-	).join("");
+	const dnaStrands = dnaStrand.split('');
+	const isValid = dnaStrands.every(dna => dnaToRnaTranscription[dna]);
 
-};
+	if(!isValid) {
+		throw new Error("Invalid input");
+	}
+
+	return dnaStrands.map(dna => dnaToRnaTranscription[dna]).join("");
+}
 
 module.exports = DnaTranscriber;
