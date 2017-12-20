@@ -7,21 +7,17 @@ const dnaToRnaTranscription = {
 	A:"U"
 };
 
-DnaTranscriber.prototype.toRna = function (dna) {
-	const dnaStrand = dna.split('');
-	var rna = "";
-
-	dnaStrand.forEach(
+DnaTranscriber.prototype.toRna = function (dnaStrand) {
+	
+	return dnaStrand.split('').map(
 		dna => {
 			if(dnaToRnaTranscription[dna]){
-				rna += dnaToRnaTranscription[dna];
+				return dnaToRnaTranscription[dna];
 			} else {
 				throw new Error("Invalid input");
 			}
 		}
-	);
-
-	return rna;
+	).join("");
 
 };
 
