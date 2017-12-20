@@ -1,2 +1,2 @@
-# exercism-javascript-exercises
-Javascript exercises from exercism.io
+# Javascript exercises from exercism.io
+http://exercism.io/karenkgs
