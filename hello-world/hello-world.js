@@ -1,7 +1,7 @@
-var HelloWorld = function () {};
-
-HelloWorld.prototype.hello = function () {
-	return "Hello, World!";
-};
+class HelloWorld {
+    hello() {
+		return "Hello, World!";
+    }
+}
 
 module.exports = HelloWorld;
