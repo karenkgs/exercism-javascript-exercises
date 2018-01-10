@@ -17,4 +17,5 @@ class DnaTranscriber {
         return dnaStrands.map(dna => dnaToRnaTranscription[dna]).join("");
     }
 }
+
 module.exports = DnaTranscriber;
